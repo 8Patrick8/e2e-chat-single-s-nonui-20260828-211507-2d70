@@ -6,4 +6,4 @@ def word_count(text: str) -> int:
 
     Mehrfach-Leerzeichen werden ignoriert; ein leerer String ergibt 0.
     """
-    raise NotImplementedError
+    return len(text.split())
