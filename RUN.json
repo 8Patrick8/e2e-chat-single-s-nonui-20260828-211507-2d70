@@ -1,0 +1,17 @@
+{
+  "runcontract": 1,
+  "services": [
+    {
+      "name": "textutils",
+      "dir": ".",
+      "stack": "python",
+      "kind": "cli",
+      "install": [["${python}", "-m", "pip", "install", "-e", "."]],
+      "start": [
+        "${python}",
+        "-c",
+        "from textutils import slugify, truncate, word_count, is_palindrome, reverse_words"
+      ]
+    }
+  ]
+}
