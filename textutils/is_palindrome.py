@@ -4,6 +4,10 @@
 def is_palindrome(text: str) -> bool:
     """Prüfe, ob ``text`` ein Palindrom ist.
 
-    Groß-/Kleinschreibung und Satzzeichen werden ignoriert.
+    Groß-/Kleinschreibung wird ignoriert und alle Zeichen außer
+    Buchstaben und Ziffern (str.isalnum) werden übersprungen.
+    Ein leerer oder nur aus übersprungenen Zeichen bestehender
+    String gilt als Palindrom.
     """
-    raise NotImplementedError
+    letters = "".join(char for char in text if char.isalnum()).lower()
+    return letters == letters[::-1]
